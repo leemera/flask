@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오즈코딩 스쿨 수강생</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            margin: 30px auto;
+        }
+        th,td {
+            border: 1px solid #abc;
+            padding: 30px;
+            text-align: center;
+        }
+
+        th{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h2 style = "text-align:center;">수강생</h2>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>이메일</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
